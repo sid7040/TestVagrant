@@ -70,6 +70,7 @@ public abstract class BaseTestNGTest {
             fail();
         }
     }
+    
 
     @AfterTest(alwaysRun = true)
     public void teardownTest() {
