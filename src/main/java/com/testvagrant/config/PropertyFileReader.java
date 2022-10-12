@@ -26,5 +26,7 @@ public class PropertyFileReader {
 
     public Properties getPropertyFile() {
         return property;
-    }
+    
+    
+}
 }
