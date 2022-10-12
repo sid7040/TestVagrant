@@ -51,20 +51,4 @@ public abstract class BasePageObject {
                 TimeUnit.SECONDS);
     }
 
-    protected abstract By getUniqueElement();
-
-    private void isLoaded() throws Error {
-        //Define a list of WebElements that match the unique element locator for the page
-        By uniqElement = getUniqueElement();
-        List<WebElement> uniqueElements = driver.findElements(uniqElement);
-        log.debug("found {} element(s) for the specified unique locator {}", uniqueElements.size(), uniqElement.toString());
-
-        // Assert that the unique element is present in the DOM
-        Assert.assertTrue((uniqueElements.size() > 0),
-                format("Unique Element %s not found for %s", uniqElement.toString(), this.getClass().getSimpleName()));
-
-        // Wait until the unique element is visible in the browser and ready to use. This helps make sure the page is
-        // loaded before the next step of the tests continue.
-        wait.until(ExpectedConditions.visibilityOfAllElements(uniqueElements));
-    }
 }
