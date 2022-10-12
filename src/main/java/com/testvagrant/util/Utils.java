@@ -47,26 +47,7 @@ public class Utils {
         return instance;
     }
 
-    public static void log_exception(Throwable throwable) {
-        log.error(throwable.getMessage());
-        log.error(String.valueOf(throwable.getCause()));
-        stream(ExceptionUtils.getRootCauseStackTrace(throwable)).forEach(log::error);
-    }
-
-    public static void log_exception(String message, Exception exception) {
-        log.error(message);
-        log.error(Arrays.toString(exception.getStackTrace()));
-    }
-
-    public static void log_exception_and_fail(Exception exception) {
-        log_exception(exception);
-        fail();
-    }
-
-    public static void log_exception_and_fail(String message, Exception exception) {
-        log_exception(message, exception);
-        fail();
-    }
+  
 
     public static int get_random_index(final int min, final int max) {
         return (new Random().nextInt(max - min + 1) + min) - 1;
