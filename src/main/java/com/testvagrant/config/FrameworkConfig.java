@@ -29,10 +29,5 @@ public class FrameworkConfig implements Cloneable, Serializable {
         return instance;
     }
 
-    @Override
-    public Object clone() throws CloneNotSupportedException {
-        log.info("Not allowed to clone the current class");
-        log.info("throwing CloneNotSupportedException for your pains ...");
-        throw new CloneNotSupportedException(String.format("Cloning not allowed for %s class", this.getClass()));
-    }
+   
 }
