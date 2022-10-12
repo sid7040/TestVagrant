@@ -1,7 +1,6 @@
 package com.testvagrant.driver;
 
 import com.testvagrant.config.FrameworkConfig;
-import com.testvagrant.exception.NoSuchDriverException;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
