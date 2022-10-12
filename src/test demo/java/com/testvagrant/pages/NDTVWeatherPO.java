@@ -12,7 +12,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.*;
-
 import static java.lang.Float.parseFloat;
 import static java.lang.Integer.parseInt;
 import static java.lang.String.format;
